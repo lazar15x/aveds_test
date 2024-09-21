@@ -1,0 +1,90 @@
+:root {
+  font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  /* line-height: 1.5; */
+  font-weight: 400;
+
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  color: rgba(37, 43, 66, 1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main-orange-color: rgba(255, 104, 91, 1);
+}
+
+#root {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1066px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 58px;
+  }
+}
+
+.btn {
+  text-align: center;
+  border-radius: 5px;
+  padding: 14px 39px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(255, 104, 91, 1);
+  color: rgba(255, 104, 91, 1);
+}
+
+.btn-fill {
+  background-color: rgba(255, 104, 91, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

@@ -1,2 +1,6 @@
-# aveds_test
-Тестовое задание
+Запуск проекта:
+
+```sh
+npm install
+npm run dev
+```

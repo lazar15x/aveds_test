@@ -1,0 +1,73 @@
+/* Стили для фона модального окна */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay.open {
+  display: flex;
+}
+
+/* Стили для модального окна */
+.modal {
+  position: relative;
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  background: white;
+
+  min-height: 300px;
+  min-width: 300px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 40px;
+}
+
+/* Стили для кнопки закрытия */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* background-color: #dc3545; */
+  background-color: rgba(255, 104, 91, 1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.login_btn {
+  font-size: 20px;
+  /* background-color: #dc3545; */
+  background-color: rgba(255, 104, 91, 1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.input_wrapper input {
+  border-radius: 5px;
+  padding: 6px;
+  font-size: 20px;
+}
