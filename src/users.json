@@ -1,11 +1,11 @@
 [
   {
-    "login": "admin",
-    "password": "admin",
+    "login": "admin11",
+    "password": "admin11",
     "name": "Вадим"
   },
   {
-    "login": "test",
+    "login": "test123",
     "password": "qwerty",
     "name": "Дмитрий"
   },
@@ -20,8 +20,8 @@
     "name": "Константин"
   },
   {
-    "login": "moder",
-    "password": "moder",
+    "login": "moder0",
+    "password": "moder0",
     "name": "Коля"
   }
 ]

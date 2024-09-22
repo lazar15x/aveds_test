@@ -44,6 +44,15 @@
   background-color: rgba(231, 64, 64, 1);
 }
 
+@media (max-width: 767px) {
+  .cards > .card:nth-child(1) {
+    order: 2;
+  }
+  .card:nth-child(2) {
+    order: 3;
+  }
+}
+
 @media (min-width: 768px) {
   .cards {
     display: flex;
