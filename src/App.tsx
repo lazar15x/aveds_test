@@ -5,24 +5,23 @@ import Contacts from './page/contacts/Contacts';
 import Home from './page/home/Home';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
-function App() {
-  const Layout = () => {
-    return (
-      <>
-        <Header />
-        <main>
-          <Outlet />
-        </main>
-      </>
-    );
-  };
+const Layout = () => {
+  return (
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+    </>
+  );
+};
 
+function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: (
         <AuthProvider>
-          {' '}
           <Layout />
         </AuthProvider>
       ),
@@ -43,11 +42,7 @@ function App() {
     },
   ]);
 
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

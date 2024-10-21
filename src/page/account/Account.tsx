@@ -1,25 +1,10 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import styles from './styles.module.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../components/login-modal/AuthContext';
 
 const Account: FC = () => {
-  const navigate = useNavigate();
   const { user, logout } = useAuth();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (user) {
-      setLoading(false);
-    } else if (!loading) {
-      setLoading(false);
-      navigate('/');
-    }
-  }, [user, loading, navigate]);
-
-  if (loading) {
-    return;
-  }
 
   return (
     <div className={styles.account}>

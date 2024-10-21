@@ -16,6 +16,7 @@ interface AuthContextType {
   user: User | null;
   login: (userData: ICredentials) => void;
   logout: () => void;
+  loading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -25,6 +26,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const userFromStorage = localStorage.getItem('user-login');
@@ -32,10 +34,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 
     if (userFromStorage) {
       setUser(JSON.parse(userFromStorage));
+    } else {
+      navigate('/');
     }
   }, []);
 
   const login = (credentials: ICredentials) => {
+    setLoading(() => true);
     const user = users.find(
       user =>
         user.login === credentials.login &&
@@ -53,7 +58,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       navigate('/acc');
     } else {
       setUser(null);
+      navigate('/');
     }
+    setLoading(() => false);
   };
 
   const logout = () => {
@@ -63,7 +70,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );
